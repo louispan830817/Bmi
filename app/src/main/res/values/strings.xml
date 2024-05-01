@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Bmi</string>
+    <string name="help">Help</string>
+    <string name="bmi_help">Body Mass Index (English: Body Mass Index, referred to as BMI), also known as Quetelet index (/kɛtəˈleɪ/[1]), referred to as body mass index[2], is calculated from a person\'s mass (weight) and height a numerical value. BMI is defined as weight divided by height squared, expressed in kilograms per square meter, and is derived from mass (kilograms) and height (meters)</string>
+    <string name="ok">OK</string>
+    <string name="your_bmi">Your BMI is : </string>
+    <string name="bmi">BMI</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
 </resources>

@@ -33,11 +33,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Help")
-                        .setMessage("身體質量指數（英語：Body Mass Index，簡稱BMI）又稱凱特萊指數（Quetelet index，/kɛtəˈleɪ/[1]），" +
-                                "簡稱體質指數[2]，是由一個人的質量（體重）和身高計算出的一個數值。" +
-                                "BMI的定義是體重除以身高的平方，以千克/平方公尺為單位表示，由質量（千克）和身高（公尺）得出")
-                        .setPositiveButton("OK",null)
+                        .setTitle(R.string.help)
+                        .setMessage(R.string.bmi_help)
+                        .setPositiveButton(R.string.ok,null)
                         .show();
             }
         });
@@ -50,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         float height = Float.parseFloat(h);
         float bmi = weight/(height*height);
         Log.d("MainActivity", "BMI:"+bmi);
-        Toast.makeText(this,"Your BMI is : "+bmi,Toast.LENGTH_LONG).show();
-        result.setText("Your BMI is : " + bmi);
+        Toast.makeText(this,getString(R.string.your_bmi)+bmi,Toast.LENGTH_LONG).show();
+        result.setText(getString(R.string.your_bmi) + bmi);
         new AlertDialog.Builder(this)
-                .setTitle("BMI")
+                .setTitle(R.string.bmi)
                 .setMessage(String.valueOf(bmi))
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         editWeight.setText("");
